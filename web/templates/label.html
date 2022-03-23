@@ -1,0 +1,239 @@
+<!DOCTYPE html>  <!--执行标准html-->
+<html lang = "en">
+    <head>
+        <mata charset = "UTF-8" />  <!--自闭和标签--> 
+            <!--标签属性 charset="UTF-8" 页面编码格式
+                http-equiv ="Refresh" Content ="30"  30秒刷新一次
+                url ="http://baidu.com"  跳转到指定网址
+                name="keywordes" content="关键字
+                name="description" content="网站描述"
+                http-equiv = "X-UA-Compatible" content ="IE=edge"
+                                只览器有效，以最新IE版本执行
+            -->
+        <title>标题显示</title>   <!--对称闭合标签-->
+        <link rel = "shortcut icon" href="" />  <!--标题图标-->
+        <style>
+                /*标签选择器*/
+            <div>{
+                color:green;  /*字体颜色 */
+                background: aqua; /*背景色 
+                    background-image:url("图片地址")  背景图片，需设宽高
+                    background-repeat:no-repeat   背景图片 设置不重复
+                    background-position: 40px -30px 设置图片显示起点
+                    background: 背景色 图片地址 起点位置 norepeat    可以一行写
+                    opacity: 0.5;   透明度 
+                    z-index: 10;   优先级 ，数值越大越优先 
+                    */
+                border:2px solid yellow;  /*边框
+                        border-top,border-left,border-right,border-bottom
+                        粗细，线性 ，颜色  */
+                margin: 27px; /*外边距 */
+                float: left; /*漂浮堆叠，clear:both 撑起标签 */ 
+                padding: 36px; /*内边距 */
+                position: fixed;  /* top = 9,right=5,固定窗口位置
+                                    relative  父标签相对位置
+                                     absolute 固定位置，滚动可移
+                                    
+                    visibility: collapse;  不显示内容  
+                    display :none; i
+                         inline 转为行内标签
+                         block 转为块级标签
+                         none  隐藏。
+                         inline-block 可设置宽高的的行内标签
+                        
+                     cursor: pointer   pointer  伪超链接
+                         help  问号
+                         move  移动
+                         wait  圆圈
+                         crosshair  十字
+                     hover{} 鼠标区域激活样式
+                         */
+
+                font size : 83px;  /*字号像素大小*/
+                height: 300px ;  /*高度 像素大小 */
+                width :60%;        /*宽度 可设置百分比大小 */
+                        
+            }
+            #i1{   /*  id选择器，设置id为i1的样式 */
+                font size:56px;
+            }
+            .c1,.c2,.c3{   /* class选择器，设置class=c1
+                              或者class=c2……的样式 
+                            ,又叫组合选择器，多个样式名用，隔开
+                            */
+                background: pink;
+            }
+            .cd ul li{ /* 层级选择器
+                        class="cd"标签下的
+                        ul标签下的li标签*/
+                border: 1px solid blue;
+                color: purple;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div style="background-color:pink;">块级标签，正行显示</div>
+            <!--块级标签有<div></div>,<h1></h1>,<p></P>等-->
+        <span style="background-color:purple;">内联标签，有多少显示多少</span>  
+            <!--内联标签也叫行内标签，还有<a></a>,<select>等-->
+        <p>&lt;a<br />djs<br />lkfa&nbsp;b&gt;
+            <!--特殊符号专用显示
+                
+                <p></p>段落标签
+                <br />换行标签 <br>是自闭和标签，自闭和标签标准写法<x />
+            -->
+            <h1>&lt;h1&gt;到&lt;h6&gt;共6个对称标签,</h1>
+            <h3>默认依次递减大小</h3>
+            <a href="http://www.baidu.com" target="_blank">跳转至百度</a>
+            <a href="#id1" target="_blank">跳转至标签</a>
+                <!--href 跳转至指定地址例如:href="#id1"
+                    锚定id="id1"的标签
+                    所有的标签都可以有id被锚定，可以不写，必须唯一
+                    target 在新页面打开
+                -->
+        </p>  
+        <form action="https://www.sougou.com/web" method="get">
+                <!--form标签属性值
+                    action属性提交表单地址，默认本网页
+                    method 提交方式，默认get方式，可选post等
+                    以字典方式提交{input标签中的name:value}
+                    enctype="multiple/form-data" 上传文件必写属性，分块上传
+                -->
+            <div>
+                    <!--input系列标题标签type类型
+                            text 普通文本
+                            password 密文
+                            radio 选项框（同name单选,需设置value=""）
+                            checkbox 复选框（同name复选,需设置value=""）
+                            file 文件选择
+                            email 邮箱（暂不全面支持）
+                            reset 重置表单
+                            button 默认无功能
+                            submit 提交当前表单
+                        select标签下拉菜单 (select 写name，option写value)
+                            multiple 设置可多选
+                            size 显示项数
+                        textarea 多行文本
+                    -->
+                <p>
+                    <label for="us">  <!--label关联input标签id-->
+                        用户名：<input type="text" id="us" />
+                </p>
+                <p>密码：<input type="passwork" /></p>
+                <p>邮箱：<input type="email" /></p>
+                <p>提交文件：<input type="file" /></p>
+                <p>
+                    性别：
+                    &nbsp;男<input type="radio" name="id"/>
+                    &nbsp;女<input type="radio" name="id"/>
+                </p>
+                <p>爱好
+                    &nbsp;游泳<input type="checkbox" />
+                    &nbsp;打球<input type="checkbox" />
+                    &nbsp;太极<input type="checkbox" />
+                </p>
+                <p>城市：
+                    <select multiple size=2>  <!--multiple 设置可多选，size 显示项数-->
+                        <optgroup label="河北省">  <!--optgroup 分组显示-->
+                            <option>邢台</option>
+                            <option>邯郸</option>
+                            <option>沧州</option>
+                            <option>唐山</option>
+                        </optgroup> 
+                        <optgroup label="山东省">
+                            <option>青岛</option>
+                            <option>烟台</option>
+                            <option>威海</option>
+                            <option>济南</option>
+                        </optgroup> 
+                    </select>
+                <p>备注：  <!--网页文本框-->
+                    <textarea></textarea>
+                </p>
+                <p>提交按钮
+                    <input type="submit" value=submit />
+                        <!--提交类型submit 检查并提交
+                            button  按钮
+                            reset  重置表单
+                        -->
+                    <input type="reset" value=reset />
+                    <input type="button" value=button />
+                </p>
+            </div>
+        </form>
+        <div id="id2" class = "cd" tyle="height: 500px; border:2px solid black; ">
+            网页框架
+            <ul>分级显示
+                    <!--<ul></ul>分级显示，条目前加点
+                        <ol></ol> 条目前加序号
+                        条目用<li></li>标识
+                    -->
+                <li>第一部分</li>
+                    <ol>
+                        <li>第一部分</li>
+                        <li>第二部分</li>
+                        <li>第三部分</li>
+                    </ol>
+                <li>第二部分</li>
+                    <dl>
+                            <!--格式化显示，<dt></dt>显示表头
+                                <dd>,</dd>显示各条目
+                            -->
+                        <dt class = "cx">表头</dt>
+                        <dd>第一部分</dd>
+                        <dd>第二部分</dd>
+                        <dd>第三部分</dd>
+                    </dl>
+                <li>第三部分</li>
+            </ul>
+        </div>
+        <div id="id3" style="height: 500px";>
+            图表显示
+            <table border=1>图表
+                    <!--定义table，包含head和body,可以不写。
+                        border属性边框。
+                        <tr></tr> 行标签
+                        <th></th>标头列标签
+                        <td></td>列标签
+                            <td>属性colspan占据列数
+                            rowspan 占据行数
+                    -->
+                <thead>
+                    <tr>
+                        <th colspan=2>第一列标题</th>
+                        <th>第三列标题</th>
+                        <th>第四列标题</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>第一列内容</td>
+                        <td>第二列内容</td>
+                        <td colspan=2 rowspan=2>第三列内容</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>第一列内容</td>
+                        <td rowspan=2>第二列内容</td>
+                    </tr>
+                        <td>第一列内容</td>
+                        <td>第三列内容</td>
+                        <td>第四列内容</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="id1" style="height: 500px";>
+            登录框显示和框架显示
+            <fieldset>
+                <legend>登陆框上显示的内容</legend>
+                <p>框里显示的内容</p>
+            </fieldset>
+            <iframe style="width:100%;height:300px" src="http://autohome.com.cn"></iframe>
+            
+        </div>
+
+    </body>
+</html>
+

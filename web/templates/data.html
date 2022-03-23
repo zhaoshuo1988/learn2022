@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang ="en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+     .w{        --背景
+         width: 1200px;
+         height: auto;
+         margin: auto;
+     }
+     .box{
+         margin-top: 60px;
+         display: flex;
+         justify-content: center;
+         /*background-color: pink;
+        */ 
+         
+     }
+     .box input{    --输入框
+         width:800px;
+         height: 50px;
+         font-size: 26px;
+         padding-left: 15px;
+         border: 1px solid deepskyblue;
+     }
+     button{
+         width: 88px;
+     }
+     #data{
+         height: 300px;
+         margin-top: 60px;
+         background-color: green;
+     }
+     #data1{
+         height: 300px;
+         margin-top: 60px;
+         background-color: purple;
+     }
+         
+</style>
+
+<body>
+
+    <script src = "https://cdn.bootcss.com/echarts/3.7.1/echarts.min.js"></script>
+    <div class = "box">
+        <input type ="text" placeholder="请输入基金编号">
+        <button id="btn">搜索</button>
+    </div>
+    <div id ="data" class = "w">
+        这里展示数据
+    </div>
+    <div id ="data1" class = "w">
+        这里展示数据1
+    </div>
+    <script>
+        option = {
+            title: {
+                text: '赵朔'
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+            },
+            yAxs: {
+                tpye: 'value'
+            },                
+            series: [
+                {
+                    data:[150,230,224,218,135,148,260],
+                    type: 'line'
+                }
+                ]
+        };
+var xl = echarts.init(document.getElementById('data'))
+xl.setOption(option)
+    $('#btn').click(function(){
+        var text =$('.box input').val()
+        $.ajax({
+            url: '/api',
+            type: 'GET',
+            data: {'key': '003095'},
+            success: function(res){
+                console.log(res)
+                },
+            error: function(){
+                console.log('服务器错误')
+                }
+        })
+        })
+
+
+    </script>
+    <script src = "https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+    
+</body>
+</html>
+
