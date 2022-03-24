@@ -1,0 +1,10 @@
+div[alex='a']{
+    background:pink;
+    color: green;
+    border:1px solid blue;
+    width:80%;
+    height:400px !important;  /*  优先级  */
+}
+body{
+    background: rgba(210,100,0,.3)
+}

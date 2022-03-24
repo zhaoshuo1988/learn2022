@@ -1,0 +1,69 @@
+ /*标签选择器 */
+    div[alex='a']{   /*[]属性选择器，自定义属性名。
+        color:green;  /*字体颜色 */
+        background: aqua; /*背景色 
+            background-image:url("图片地址")  背景图片，需设宽高
+            background-repeat:no-repeat   背景图片 设置不重复
+            background-position: 40px -30px 设置图片显示起点
+            background: 背景色 图片地址 起点位置 norepeat    可以一行写
+            opacity: 0.5;   透明度 
+            z-index: 10;   优先级 ，数值越大越优先 
+            */
+        border:2px solid yellow;  /*边框
+                border-top,border-left,border-right,border-bottom
+                粗细，线性 ，颜色  */
+        margin: 27px; /*外边距 */
+        float: left; /*漂浮堆叠，clear:both 撑起标签 */ 
+        padding: 36px; /*内边距 */
+        position: fixed;  /* top = 9,right=5,固定窗口位置
+                            relative  父标签相对位置
+                             absolute 固定位置，滚动可移
+                            
+            visibility: collapse;  不显示内容  
+            display :none; i
+                 inline 转为行内标签
+                 block 转为块级标签
+                 none  隐藏。
+                 inline-block 可设置宽高的的行内标签
+                
+             cursor: pointer   pointer  伪超链接
+                 help  问号
+                 move  移动
+                 wait  圆圈
+                 crosshair  十字
+                 */
+
+        font size : 83px;  /*字号像素大小*/
+        height: 300px ;  /*高度 像素大小 */
+        width :60%;        /*宽度 可设置百分比大小 */
+        overflow:auto;    /*右侧滚动条  */
+                
+    }
+        /*
+         hover{color:'red';} 鼠标区域激活样式
+         before{ content:"skdljf";}文本前加内容
+         after{ content:'777';} 内容后加入
+        */
+    .clearfix:after{  /*float 外标签撑起标签， 伪类清除浮动*/
+        content:'.';
+        clear:both;
+        display:block;
+        visibility:hidden;
+        height:0
+    }
+    #i1{   /*  id选择器，设置id为i1的样式 */
+        font size:56px;
+    }
+    .c1,.c2,.c3{   /* class选择器，设置class=c1
+                      或者class=c2……的样式 
+                    ,又叫组合选择器，多个样式名用，隔开
+                    */
+        background: pink;
+    }
+    .cd ul li{ /* 层级选择器
+                class="cd"标签下的
+                ul标签下的li标签*/
+        border: 1px solid blue;
+        color: purple;
+    }
+    

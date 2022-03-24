@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title> </title>
+        <style>
+            .item{
+                padding:50px;
+                position:relative;
+            }
+            .item span{
+                position:absolute;
+                top: 49px;
+                left:71px;
+                opacity:1;
+                font-size;18px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class ="item">
+            <a onclick="Favor(this);">赞</a> 
+            <!--onclick单击事件相应函数 -->
+        </div>
+        <div class ="item">
+            <a onclick="Favor(this);">赞</a>
+        </div>
+        <div class ="item">
+            <a onclick="Favor(this);">赞</a>
+        </div>
+        <div class ="item">
+            <a onclick="Favor(this);">赞</a>
+        </div>
+        <div class ="item">
+            <a onclick="Favor(this);">赞</a>
+        </div>
+        <div class ="item">
+            <a onclick="Favor(this);">赞</a>
+        </div>
+    <script>
+        function Favor(ths){
+            console.log(ths);  //日志打印函数响应标签
+            
+            var top =19;
+            var left =71;
+            var op =1;
+            var fontSize = 18
+            var tag = document.createElement('span');
+            //document.createElemen() 创建标签对象
+            //tag.* =… 设置标签对象属性
+            tag.innerText='+1';
+            tag.style.position = 'absolute';
+            tag.style.top=top +"px";
+            tag.style.left=left +"px";
+            tag.style.opacity=op;
+            tag.style.fontSize=fontSize +"px";
+            //插入标签对象
+            ths.parentElement.appendChild(tag);
+
+            var interval=setInterval(function(){  
+                //setInterval(函数，时间） 创建定时器
+                top-=10;
+                left +=10;
+                fontSize +=15
+                op -=0.17
+
+                tag.style.position = 'absolute';
+                tag.style.top=top +"px";
+                tag.style.left=left +"px";
+                tag.style.opacity=op;
+
+                if (op<=0.2){
+                    clearInterval(interval);  //清除定时器
+                    ths.parentElement.removeChild(tag);
+
+                }
+                
+
+            },50);
+            
+        }
+            
+    </script>
+
+    </body>
+</html>
+
+

@@ -12,68 +12,13 @@
             -->
         <title>标题显示</title>   <!--对称闭合标签-->
         <link rel = "shortcut icon" href="" />  <!--标题图标-->
+        <link rel ="stylesheet" href="styles.css" /> <!--引用css文件
         <style>
-                /*标签选择器*/
-            <div>{
-                color:green;  /*字体颜色 */
-                background: aqua; /*背景色 
-                    background-image:url("图片地址")  背景图片，需设宽高
-                    background-repeat:no-repeat   背景图片 设置不重复
-                    background-position: 40px -30px 设置图片显示起点
-                    background: 背景色 图片地址 起点位置 norepeat    可以一行写
-                    opacity: 0.5;   透明度 
-                    z-index: 10;   优先级 ，数值越大越优先 
-                    */
-                border:2px solid yellow;  /*边框
-                        border-top,border-left,border-right,border-bottom
-                        粗细，线性 ，颜色  */
-                margin: 27px; /*外边距 */
-                float: left; /*漂浮堆叠，clear:both 撑起标签 */ 
-                padding: 36px; /*内边距 */
-                position: fixed;  /* top = 9,right=5,固定窗口位置
-                                    relative  父标签相对位置
-                                     absolute 固定位置，滚动可移
-                                    
-                    visibility: collapse;  不显示内容  
-                    display :none; i
-                         inline 转为行内标签
-                         block 转为块级标签
-                         none  隐藏。
-                         inline-block 可设置宽高的的行内标签
-                        
-                     cursor: pointer   pointer  伪超链接
-                         help  问号
-                         move  移动
-                         wait  圆圈
-                         crosshair  十字
-                     hover{} 鼠标区域激活样式
-                         */
-
-                font size : 83px;  /*字号像素大小*/
-                height: 300px ;  /*高度 像素大小 */
-                width :60%;        /*宽度 可设置百分比大小 */
-                        
-            }
-            #i1{   /*  id选择器，设置id为i1的样式 */
-                font size:56px;
-            }
-            .c1,.c2,.c3{   /* class选择器，设置class=c1
-                              或者class=c2……的样式 
-                            ,又叫组合选择器，多个样式名用，隔开
-                            */
-                background: pink;
-            }
-            .cd ul li{ /* 层级选择器
-                        class="cd"标签下的
-                        ul标签下的li标签*/
-                border: 1px solid blue;
-                color: purple;
-            }
-        </style>
+        </style>   -->
 
     </head>
     <body>
-        <div style="background-color:pink;">块级标签，正行显示</div>
+        <div alex="a" style="background-color:pink;">块级标签，正行显示</div>
             <!--块级标签有<div></div>,<h1></h1>,<p></P>等-->
         <span style="background-color:purple;">内联标签，有多少显示多少</span>  
             <!--内联标签也叫行内标签，还有<a></a>,<select>等-->
@@ -125,7 +70,7 @@
                 <p>提交文件：<input type="file" /></p>
                 <p>
                     性别：
-                    &nbsp;男<input type="radio" name="id"/>
+                    &nbsp;男<input type="radio" name="id" checked="checked"/>
                     &nbsp;女<input type="radio" name="id"/>
                 </p>
                 <p>爱好
@@ -139,7 +84,7 @@
                             <option>邢台</option>
                             <option>邯郸</option>
                             <option>沧州</option>
-                            <option>唐山</option>
+                            <option selected="selected">唐山</option>
                         </optgroup> 
                         <optgroup label="山东省">
                             <option>青岛</option>
@@ -234,6 +179,10 @@
             
         </div>
 
+        <script src="./javascript/介绍.js">  /*  javascript标签
+            src 引用文件路径
+            考虑到浏览器响应速度，一般放在body最下边 */
+        </script>
     </body>
 </html>
 

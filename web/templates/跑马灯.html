@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title> </title>
+        
+    </head>
+    <body>
+        <div id="i1" style ='display: inline-block;
+                background:green;color:white;'>
+            欢迎莅临指导. &nbsp; 
+        </div>
+    <script>
+        setInterval('f1()',1000);    //定时器，定时执行f1函数
+
+
+        function f1(){    //定义函数
+            
+            // js获取某一个标签 id=i1
+            var tag = document.getElementById('i1');
+            // 获取标签内容
+            var text =tag.innerText;
+            //  alert(text);
+            var a=text.charAt(0);
+            var sub=text.substring(1,text.length);
+            var new_str=sub+a;
+            tag.innerText= new_str;
+            //  alert(sub);
+        }
+
+
+    </script>
+
+
+    </body>
+</html>
+
+
