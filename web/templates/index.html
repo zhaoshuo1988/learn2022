@@ -24,20 +24,73 @@
         </div>  
         <div class="pg-body row">
             <div id='leftBody' class= "column side">
-                <p>菜单</p>
+                <dl>报表填制
+                    <dt>报工表</dt>
+                    <dt>报废表</dt>
+                    <dt>盘点表</dt>
+                </dl>
+                <dl>数据查询
+                    <dt>表单查询</dt>
+                    <dt>库存查询</dt>
+                    <dt>工资查询</dt>
+                </dl>
+                <dl>信息维护
+                    <dt>仓位维护</dt>
+                    <dt>工序维护</dt>
+                </dl>
             </div>
-            <div id='middBody' class= "column middle">
-                <div id='middBodyT',style="height:300;">
-                    <p>子功能选项</p>
+            <div id='middBody' class= "column right">
+                <div class='formMenu'>
+                    <span>前单</span>
+                    <span>后单</span>
+                    <span>新增</span>
+                    <span>复制</span>
+                    <span>保存</span>
+                    <span>审核</span>
+                    <span>反审核</span>
+                    <span>删单</span>
+                    <span>设置</span>
+                    <span>退出</span>
                 </div>
-                <div id='middBodyB',style="height:300;
-                    border:1px solid black">
-                    <p>预警信息项</p>
+                <div id='formTittle'>
+                    <h2 style="border-style:
+                        none none double none;">报工表</h2>
+                    <div class='clearfix'>
+                        <div class='formTittle'>
+                            <span>源单编号：</span>
+                            <select name="deriveNum">
+                                <option value="" 
+                                selected="selectes"></option>
+                            </select>
+                        </div>
+                        <div class='formTittle'>
+                            <span>日  期：</span>
+                            <input type='date' name="date">
+                        </div>
+                        <div class='formTittle'>
+                            <span>编  号：</span>
+                            <input name="numb" type='text'
+                                required="required">
+                        </div>
+                        <div class='formTittle'>
+                            <span>产品名称：</span>
+                            <input type='text' name="goodsName"
+                                readonly="readonly">
+                        </div>
+                        <div class='formTittle'>
+                            <span>物料代码：</span>
+                            <select name="goodsId">
+                                <option value="" 
+                                selected="selectes"></option>
+                            </select>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div id='rightBody'class= "column side">
+            <!-- <div id='rightBody'class= "column side">
                 <p>基础资料项</p>
-            </div>
+            </div>  -->
 
         </div>  
         <div class="pg-footer">
